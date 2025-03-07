@@ -1,12 +1,14 @@
 package com.habeeb.myApp;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Dev {
 
     @Autowired // Connect the Laptop.java to Dev.java (Field Injection)
+    @Qualifier("desktop")
     private Computer comp;
 
     // public Dev(Laptop laptop) { // Another way to connect laptop to dev (Constructor Injection)
