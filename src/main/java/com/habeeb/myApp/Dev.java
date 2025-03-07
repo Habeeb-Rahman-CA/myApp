@@ -7,19 +7,19 @@ import org.springframework.stereotype.Component;
 public class Dev {
 
     @Autowired // Connect the Laptop.java to Dev.java (Field Injection)
-    private Laptop laptop;
+    private Computer comp;
 
     // public Dev(Laptop laptop) { // Another way to connect laptop to dev (Constructor Injection)
     //     this.laptop = laptop;
     // }
 
-    @Autowired
-    public void setLaptop(Laptop laptop){ // Another way of DI (Setter Injection)
-        this.laptop = laptop;
-    }
+    // @Autowired
+    // public void setLaptop(Laptop laptop){ // Another way of DI (Setter Injection)
+    //     this.laptop = laptop;
+    // }
 
     public void build() {
-        laptop.compile();
+        comp.compile();
         System.out.println("Working on Java Project");
     }
 }
